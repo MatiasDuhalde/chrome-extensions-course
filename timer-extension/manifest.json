@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "name": "Timer Extension",
+  "version": "1.0.0",
+  "description": "A simple timer extension",
+  "platforms": ["chrome"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png",
+    "256": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "24": "icon.png",
+      "32": "icon.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Timer Extension"
+  },
+  "options_page": "options.html",
+  "permissions": ["alarms", "notifications", "storage"],
+  "background": {
+    "type": "module",
+    "service_worker": "background.js"
+  }
+}
